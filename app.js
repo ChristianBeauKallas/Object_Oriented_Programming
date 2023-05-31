@@ -8,10 +8,10 @@ class Person {
         this.hobbies = hobbies; 
     }
     addHobby(hobby){
-        this.hobbies = this.hobbies + hobby;
+        hobbies.push(hobby);
     }
     removeHobby(hobby) {
-        this.hobbies = this.hobbies - hobby;
+        this.hobbies.splice(this.hobbies.indexOf(hobby),1);
     }
     greeting() {
         console.log("Hello fellow person!")
@@ -61,6 +61,7 @@ class Calculator {
         console.log(this.result)
     }
 }
-const calculator = new Calculator (3);
+const calculator = new Calculator (7);
+calculator.displayResult();
 calculator.add(3,5);
 calculator.displayResult();
